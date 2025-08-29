@@ -79,8 +79,8 @@
     }
   },
   "logo": {
-    "light": "/logo/cookie-with-snack-money.svg",
-    "dark": "/logo/cookie-with-snack-money.svg"
+    "light": "/logo/snack-money.svg",
+    "dark": "/logo/snack-money.svg"
   },
   "navbar": {
     "links": [
