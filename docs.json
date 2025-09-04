@@ -57,10 +57,12 @@
             ]
           },
           {
-            "group": "Endpoints",
-            "openapi": {
-              "source": "https://api.snack.money/openapi.json"
-            }
+            "group": "Payments",
+            "openapi": "https://api.snack.money/openapi.json?tags=Payments&group_by=Farcaster,X,Email,Web"
+          },
+          {
+            "group": "Rewards",
+            "openapi": "https://api.snack.money/openapi.json?tags=Rewards&group_by=Farcaster"
           }
         ]
       }
@@ -73,6 +75,20 @@
           "icon": "globe"
         }
       ]
+    }
+  },
+  "api": {
+    "playground": {
+      "display": "interactive",
+      "proxy": true
+    },
+    "examples": {
+      "languages": [
+        "curl",
+        "python",
+        "javascript"
+      ],
+      "defaults": "required"
     }
   },
   "logo": {
@@ -94,15 +110,15 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
     "socials": {
