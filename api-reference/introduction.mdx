@@ -1,33 +1,68 @@
 ---
-title: 'Introduction to Snack Money'
-description: 'Example section for showcasing API endpoints'
+title: 'Snack Money API'
+description: 'The Snack Money API enables seamless microtransaction and reward distribution for social networks and other platforms.'
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+# Snack Money API
+**v1.0.0**
 
-## Welcome
+The **Snack Money API** enables seamless microtransaction and reward distribution for social networks and other platforms.  
+It is designed for scenarios where you need to send small amounts of USDC to individual users or groups, validate payments, and automate content-based reward payouts.
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+---
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+## Features
+
+- **Single Payments** – Send USDC payments directly to recipients via platform-specific endpoints.
+- **Batch Payments** – Send USDC to multiple recipients in one request via batch payment endpoints.
+- **Payment Validation** – Validate payment status and details using `/payments/validate`.
+- **Reward Distribution** – Create and confirm reward distribution orders based on content engagement.
+- **Supports Multiple Identities** – Payments can be made to recipients identified via:
+  - Farcaster (`/payments/farcaster/pay`)
+  - X/Twitter (`/payments/x/pay`)
+  - Email (`/payments/email/pay`)
+  - Domain names (`/payments/web/pay`)
+- **X402-Compliant** – Payment-required responses include full X-PAYMENT header details for compliance.
+
+---
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+Some endpoints require the `X-PAYMENT` header for processing.  
+The header contains payment details that comply with the [X402 payment protocol](https://x402.org/).
 
-```json
-"security": [
-  {
-    "bearerAuth": []
-  }
-]
-```
+---
+
+## Error Handling
+
+The API returns standardized error responses:
+- **400** – Validation errors
+- **402** – Payment required
+- **500** – Internal server errors
+
+---
+
+## Main Endpoints
+
+### Payment Endpoints
+- `POST /payments/farcaster/pay` - Pay to Farcaster user
+- `POST /payments/x/pay` - Pay to X user
+- `POST /payments/email/pay` - Pay to user via email
+- `POST /payments/web/pay` - Pay to user via domain name/URL
+- `POST /payments/farcaster/batch-pay` - Batch pay to Farcaster users
+- `POST /payments/x/batch-pay` - Batch pay to X users
+- `POST /payments/email/batch-pay` - Batch pay to users via email
+- `GET /payments/validate` - Validate payment
+
+### Reward Distribution Endpoints
+- `POST /rewards/farcaster/create-distribution` - Create reward distribution for Farcaster content
+- `POST /rewards/farcaster/confirm-distribution` - Confirm reward distribution for Farcaster content
+
+---
+
+## Example Use Cases
+
+- Reward social media users for likes, comments, or reposts.
+- Facilitate tipping between content creators and followers.
+- Automate campaign-based payouts.
+- Batch transfer funds to multiple recipients with one API call.
