@@ -14,35 +14,82 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Overview",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "overview/introduction",
+              "overview/concepts",
+              "overview/use-cases",
+              "overview/architecture"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Getting Started",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "getting-started/api-keys",
+              "getting-started/quickstart",
+              "getting-started/sdk-setup"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Guides",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              "guides/payments",
+              "guides/accounts-wallets",
+              "guides/rewards"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Integrations",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "integrations/web-nginx",
+              "integrations/bots-agents",
+              "integrations/social"
+            ]
+          },
+          {
+            "group": "API Reference",
+            "pages": [
+              "api/authentication",
+              "api/payments",
+              "api/rewards",
+              "api/accounts",
+              "api/validation",
+              "api/errors"
+            ]
+          },
+          {
+            "group": "SDKs & Tools",
+            "pages": [
+              "sdks/javascript",
+              "sdks/python",
+              "sdks/x402-axios",
+              "sdks/cli"
+            ]
+          },
+          {
+            "group": "Advanced Topics",
+            "pages": [
+              "advanced/x402-protocol",
+              "advanced/spend-permissions",
+              "advanced/offchain-vs-onchain",
+              "advanced/security-model"
+            ]
+          },
+          {
+            "group": "Examples & Recipes",
+            "pages": [
+              "examples/protect-article",
+              "examples/tip-farcaster",
+              "examples/rewards-agent",
+              "examples/nginx-token-forwarding"
+            ]
+          },
+          {
+            "group": "Support",
+            "pages": [
+              "support/faq",
+              "support/troubleshooting",
+              "support/contact"
             ]
           }
         ]
