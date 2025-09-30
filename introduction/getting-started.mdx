@@ -1,6 +1,32 @@
 ---
 title: "Getting Started"
-description: "Description of your new file."
+description: "Code Example"
 ---
 
-getting started
+
+Sending stablecoin to an X account. 
+
+```
+const account = privateKeyToAccount(privateKey);
+const api = withPaymentInterceptor(
+  axios.create({ "https://api.snack.money }),
+  account as never,
+);
+
+api
+  .post(`/payments/x/pay`, {
+    0.19,
+    currency: "USDC",
+    receiver: "0xmesuthere",
+    description: "Nice Tweet"
+   })
+  .then(response => {
+    console.log('response', response.headers);
+    const paymentResponse = decodeXPaymentResponse(response.headers["x-payment-response"]);
+    console.log(paymentResponse);
+  })
+  .catch(error => {
+    console.error('error', error);
+  });
+
+```
