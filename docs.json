@@ -16,8 +16,8 @@
           {
             "group": "Introduction",
             "pages": [
-              "introduction/overview",
-              "introduction/getting-started"
+              "/introduction/overview",
+              "/introduction/getting-started"
             ]
           },
           {
