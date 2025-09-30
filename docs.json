@@ -11,15 +11,13 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Guides",
+        "tab": "Overview",
         "groups": [
           {
-            "group": "Overview",
+            "group": "Introduction",
             "pages": [
-              "overview/introduction",
-              "overview/concepts",
-              "overview/use-cases",
-              "overview/architecture"
+              "introduction/overview",
+              "introduction/getting-started"
             ]
           },
           {
