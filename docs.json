@@ -33,7 +33,7 @@
           },
           {
             "group": "Payments",
-            "openapi": "https://api.snack.money/openapi.json?tags=Payments&group_by=Farcaster,X,Email,Web"
+            "openapi": "https://api.snack.money/openapi.json?tags=Payments&group_by=Farcaster,X,Github,Email,Web"
           },
           {
             "group": "Rewards",
